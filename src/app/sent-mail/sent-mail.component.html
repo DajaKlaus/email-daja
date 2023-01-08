@@ -1,0 +1,14 @@
+<div class="card-header">
+    <h3>Email</h3>
+</div>
+<div class="card-body">
+    <p style="display: inline;">{{ mail.subject }} &mdash; {{ mail.newemail }}</p>
+    <button (click)="Espandi()" style="float: right;">Espandi</button>
+</div>
+<div class="card-footer">
+    <p>{{ mail.message }}</p>
+    <div class="container-fluid">
+        <button (click)="Chiudi()">chiudi</button>
+        <button (click)="Speciale()">speciale</button>
+    </div>
+</div>

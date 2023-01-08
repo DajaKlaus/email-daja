@@ -1,0 +1,21 @@
+p {
+    vertical-align: -webkit-baseline-middle;
+}
+
+button {
+    color: #fff;
+    background-color: rgb(255, 128, 0);
+    padding: 4px 7px;
+    margin-left: 12px;
+    font-size: 110%;
+}
+
+.card-footer {
+    position: relative;
+}
+
+.container-fluid {
+    position: absolute;
+    top: 10px;
+    left: 85%;
+}
