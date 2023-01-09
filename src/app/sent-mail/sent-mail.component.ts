@@ -10,20 +10,24 @@ declare  var jQuery:  any;
 export class SentMailComponent implements OnInit {
     @HostBinding('attr.class') cssClass = 'card mt-3';
     @Input() mail:Email;
+    vis: boolean;
     col: boolean;
+    
 
     constructor() {
         this.mail = new Email('', '', '');
         this.col = false;
+        this.vis = false;
     }
 
     Espandi():Boolean {
-        this.mail.expand();
+        console.log(this.vis);
+        this.vis = true;
         return false;
     }
 
     Chiudi():Boolean {
-        this.mail.close();
+        this.vis = false;
         return false;
     }
 

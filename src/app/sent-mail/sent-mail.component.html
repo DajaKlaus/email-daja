@@ -5,7 +5,7 @@
     <p style="display: inline;">{{ mail.subject }} &mdash; {{ mail.newemail }}</p>
     <button (click)="Espandi()" style="float: right;">Espandi</button>
 </div>
-<div class="card-footer">
+<div *ngIf="vis" class="card-footer">
     <p>{{ mail.message }}</p>
     <div class="container-fluid">
         <button (click)="Chiudi()">chiudi</button>
