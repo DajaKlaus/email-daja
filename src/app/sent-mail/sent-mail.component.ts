@@ -12,6 +12,7 @@ export class SentMailComponent implements OnInit {
     @Input() mail:Email;
     vis: boolean;
     col: boolean;
+    color: string = 'transparent';
     
 
     constructor() {
@@ -27,34 +28,23 @@ export class SentMailComponent implements OnInit {
     }
 
     Chiudi():Boolean {
+        console.log(this.vis);
         this.vis = false;
         return false;
     }
 
     Speciale():Boolean {
-        if (this.col == false) {
-            (function ($) {
-                $('.card-footer').css({
-                    "background-image": "linear-gradient(rgba(252, 219, 3, 0.4), rgba(252, 219, 3, 0.4))"
-                });
-            })(jQuery);
-            this.col = true;
-        } else if (this.col = true) {
-            (function ($) {
-                $('.card-footer').css({
-                    "background-image": "linear-gradient(rgba(248, 248, 248, 255), rgba(248, 248, 248, 255))"
-                });
-            })(jQuery);
-            this.col = false;
+        if (this.color === 'transparent') {
+            this.color = 'yellow';
+            this.vis = false;
+        } else {
+           this.color = 'transparent';
+            this.vis = true;
         }
-        return false;
+        return false  
     }
 
     ngOnInit(){
-        (function ($) {
-            $(document).ready(function(){
-                $('.card-footer').hide();
-            });
-        })(jQuery);
+        this.vis = false
     }
 }
